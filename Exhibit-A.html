@@ -49,51 +49,17 @@
             font-size: 0.8rem;
             z-index: 1;
         }
-        .eeg-container {
-            height: 150px;
-            background: #12122a;
-            margin: 2rem 0;
-            position: relative;
-            overflow: hidden;
-            border-radius: 5px;
-            border: 1px solid #4ecdc4;
+
+<!-- GIF -->
+<img src="https://github.com/wormbot-noob/DrHLinks/raw/main/assets/EEG.gif">
+
+
+        // Show EEG GIF
+        function showHarvey() {
+            const gif = document.getElementById('EEG');
+            gif.style.display = gif.style.display === 'block' ? 'none' : 'block';
         }
-        .eeg-grid {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(to right, rgba(78, 205, 196, 0.1) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(78, 205, 196, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-        .eeg-line {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background: none;
-        }
-        .eeg-line::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
-            animation: eeg 3s infinite linear;
-        }
-        @keyframes eeg {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        .eeg-line:nth-child(1)::before { animation-delay: 0s; top: 30%; }
-        .eeg-line:nth-child(2)::before { animation-delay: 0.5s; top: 50%; }
-        .eeg-line:nth-child(3)::before { animation-delay: 1s; top: 70%; }
-        .gauge-container {
-            text-align: center;
-            margin: 2rem 0;
-        }
+        
         .gauge {
             width: 100%;
             height: 30px;
